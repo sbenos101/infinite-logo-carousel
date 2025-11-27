@@ -1,0 +1,16 @@
+#LogoContainerOuter { position: relative; background-color: #009845; padding: 3rem 0; overflow: hidden; width: 100%; }
+.fade-overlay-left, .fade-overlay-right { position: absolute; top: 0; bottom: 0; width: 150px; pointer-events: none; z-index: 10; }
+.fade-overlay-left { left: 0; background: linear-gradient(to right, rgba(0, 152, 69, 1), rgba(0, 152, 69, 0)); }
+.fade-overlay-right { right: 0; background: linear-gradient(to left, rgba(0, 152, 69, 1), rgba(0, 152, 69, 0)); }
+#LogoContainer { display: flex; width: fit-content; position: relative; z-index: 1; }
+.logo-track { display: flex; animation: scroll 25s linear infinite; }
+.logo-item { display: inline-block; flex-shrink: 0; padding: 0 2rem; position: relative; z-index: 1; }
+.logo-item svg { height: 50px; width: auto; display: block; }
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); }}
+
+
+@media (max-width: 767px) {
+
+.fade-overlay-left, .fade-overlay-right { width: 25px; }
+
+}
